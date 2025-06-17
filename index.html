@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tourism in Tanzania</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Mount_Kilimanjaro.jpg') no-repeat center center/cover;
+      height: 50vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 5px #000;
+    }
+    header h1 {
+      font-size: 3rem;
+    }
+    section {
+      padding: 2rem;
+    }
+    .attractions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 1rem;
+      flex: 1 1 250px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 1rem;
+    }
+    .lang-switch {
+      text-align: right;
+      padding: 1rem;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      const elements = document.querySelectorAll('[data-en], [data-sw]');
+      elements.forEach(el => {
+        el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-sw');
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('sw')">Swahili</button>
+  </div>
+  <header>
+    <h1 data-en="Explore Tanzania" data-sw="Gundua Tanzania">Explore Tanzania</h1>
+  </header>
+  <section>
+    <h2 data-en="Top Attractions" data-sw="Vivutio Maarufu">Top Attractions</h2>
+    <div class="attractions">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Serengeti_Landscape.jpg" alt="Serengeti" />
+        <h3 data-en="Serengeti National Park" data-sw="Hifadhi ya Taifa ya Serengeti"></h3>
+        <p data-en="Famous for the Great Migration and diverse wildlife." data-sw="Maarufu kwa uhamaji mkubwa na wanyamapori wengi." ></p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Zanzibar_Beach_2.jpg" alt="Zanzibar" />
+        <h3 data-en="Zanzibar Beaches" data-sw="Fukwe za Zanzibar"></h3>
+        <p data-en="Pristine beaches, spice tours, and history." data-sw="Fukwe safi, ziara za viungo, na historia." ></p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Mount_Kilimanjaro.jpg" alt="Kilimanjaro" />
+        <h3 data-en="Mount Kilimanjaro" data-sw="Mlima Kilimanjaro"></h3>
+        <p data-en="Africa's highest peak – climb the Roof of Africa." data-sw="Kilele cha juu Afrika – panda paa la Afrika." ></p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2 data-en="Contact & Booking" data-sw="Wasiliana na Uwekaji Nafasi"></h2>
+    <p data-en="Email us at example@example.com or call +255 712 345 678"
+       data-sw="Tutumie barua pepe example@example.com au piga simu +255 712 345 678"></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Tourism Tanzania. All rights reserved.</p>
+  </footer>
+</body>
+</html>
